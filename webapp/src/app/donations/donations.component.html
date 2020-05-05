@@ -1,0 +1,65 @@
+<form #form="ngForm" (submit)="onSubmit(form)"  #myForm="ngForm" autocomplete="off">
+  <!-- Form for donations -->
+<div class="pageup">
+  <div class="form-group">
+    <label >Name :</label>
+    <input id="i1" name="name" #Name="ngModel" [(ngModel)]="service.formData.name" placeholder="Name" required>
+    <div class="validation-error" *ngIf="Name.invalid && Name.touched">This field is required. </div>
+  </div>
+
+  <div>
+    <label>Item :</label>
+    <input id="i2" name="item" #Item="ngModel" [(ngModel)]="service.formData.item"
+      placeholder="Name of the donation item" required>
+    <div class="validation-error" *ngIf="Item.invalid && Item.touched">Name of item to be donated is required. </div>
+  </div>
+
+  <div>
+    <label>Description :</label>
+    <input id="i3" name="description" #Description="ngModel" [(ngModel)]="service.formData.description" placeholder="Description">
+  </div>
+
+  <div>
+    <label>Quantity :</label>
+    <input id="i4" type="number" #Quantity="ngModel" [(ngModel)]="service.formData.quantity"
+      placeholder="Quantity" numbersOnly>
+    <div class="validation-error" *ngIf="Quantity.touched && Quantity.invalid ">Please enter digits in this field. </div>
+  </div>
+
+  <div class="form-group" >
+    <label for="email" class="control-label">Email :</label>
+    <input id="i5" required email name="email" #Email="ngModel" [(ngModel)]="service.formData.email" placeholder="Email">
+    <div>
+      <span *ngIf="Email.errors?.required && Email.touched">
+        Email is required
+      </span>
+      <span *ngIf="Email.errors?.email && Email.touched">
+        Email is invalid
+      </span>
+    </div>
+  </div>
+
+  <div>
+    <label>Address :</label>
+    <input id="i6" name="address" #Address="ngModel" [(ngModel)]="service.formData.address" placeholder="Address" required>
+    <div class="validation-error" *ngIf="Address.invalid && Address.touched">Address field is required. </div>
+  </div>
+
+  <div>
+    <label>Phone</label>
+    <input  id="i7" name="phone" #Phone="ngModel" [(ngModel)]="service.formData.phone" placeholder="Phone" title="Error Message" pattern="[1-9]{1}[0-9]{9}" required>
+    <div class="validation-error" *ngIf="Phone.invalid && Phone.touched">Plese enter valid 10 digit phone number </div>
+  </div>
+
+  <div class="form-group">
+    <label>Date :</label>
+    <input  id="i8" type="datetime-local" name="Date" #Date="ngModel" [(ngModel)]="service.formData.Date"
+      required="required">
+      <div class="validation-error" *ngIf="Date.invalid && Date.touched">This field is required. </div>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" [disabled]="!myForm.form.valid">SUBMIT</button>
+    <a class="nav-link h5" [routerLink]="'/donations'">Back</a>
+  </div>
+

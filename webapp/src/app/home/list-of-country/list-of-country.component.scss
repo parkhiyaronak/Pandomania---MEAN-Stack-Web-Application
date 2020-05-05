@@ -1,0 +1,29 @@
+//main page style
+.maint{
+  //background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  //background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  background-color: #E4E4E1;
+  background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+ 	background-blend-mode: normal, multiply;
+  padding-left: 150px;
+}
+//country color
+.country-name{
+    color : rgb(68, 149, 255);
+}
+//alternate coloring
+.page{
+  background-color: solid green !important;
+  margin-right: 200px !important;
+}
+.heading{
+  font-size: 30px;
+  color: #014535;
+
+}
+tr:hover {background-color:#f5f5f5;}
+.scroll{
+  overflow:scroll;
+    height:400px;
+}
+

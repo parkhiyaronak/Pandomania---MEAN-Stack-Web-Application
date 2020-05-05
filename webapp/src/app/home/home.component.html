@@ -1,0 +1,14 @@
+<app-map></app-map>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="container base-container">
+
+    <hr class="desktopSelectBox" style="color: black;" />
+    <div class="row">
+      <div class="col-sm-12 base-table-div">
+        <app-list-of-country [countriesData]="countriesDataC" *ngIf="countriesDataC.length > 0"></app-list-of-country>
+      </div>
+    </div>
+</div>

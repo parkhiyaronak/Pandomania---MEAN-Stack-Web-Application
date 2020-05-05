@@ -1,0 +1,50 @@
+<div class="maint">
+  <!-- List of countries tables -->
+<h2 class="heading">Coronavirus Cases and Deaths by Country</h2>
+<hr>
+<div class="page">
+<div class="row">
+    <div class="col-sm-3">
+        <input type="text" class="form-control" placeholder="Search By Country..." [(ngModel)]="searchString"  />
+    </div>
+</div>
+<hr>
+<div class="scroll">
+  <table class="table table-light table-striped tablesorter-default" id="indexpage">
+    <thead>
+      <tr class="tablesorter-headerRow">
+        <!-- importing the tables -->
+        <th data-column="0" class="tablesorter-header" tabindex="0" unselectable="on" [class.active]="order === 'country'" (click)="setOrder('country')">
+           Country
+        </th>
+        <th data-column="1" class="tablesorter-header" tabindex="0" unselectable="on" [class.active]="order === 'cases'" (click)="setOrder('cases')">
+           Total
+        </th>
+        <th data-column="3" class="tablesorter-header" tabindex="0" unselectable="on" [class.active]="order === 'recovered'" (click)="setOrder('recovered')">
+          Deaths
+        </th>
+        <th data-column="5" class="tablesorter-header" tabindex="0" unselectable="on" [class.active]="order === 'deaths'"  (click)="setOrder('deaths')">
+          Recovered
+        </th>
+        <th data-column="6" class="tablesorter-header" tabindex="0" unselectable="on" [class.active]="order === 'critical'" (click)="setOrder('critical')">
+          Critical
+        </th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of  countriesDataCloned | filter : searchString : 'country'  | orderBy: order:reverse ">
+          <td>
+            <div><span class="country-name" > {{item.country}}</span></div>
+          </td>
+          <td>{{+item.cases}}</td>
+          <td>{{+item.deaths}}</td>
+          <td>{{+item.recovered}}</td>
+          <td>{{+item.critical}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+</div>
+</div>
+

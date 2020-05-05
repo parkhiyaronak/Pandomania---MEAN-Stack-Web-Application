@@ -1,0 +1,76 @@
+/* page alignment*/
+.pageup{
+  margin-left: 500px;
+  height: 100;
+}
+/* for all labels*/
+label {
+  text-shadow: 2px 2px 5px grey;
+  font-size: 15px;
+
+}
+/* for all input box styling*/
+input{
+  border: 2px solid #3dc46c;
+  border-radius: 4px;
+  width: 200px;
+
+}
+#format{
+  margin-top: 10px;
+}
+/* custom editing of input boxes(i1-i9)*/
+#i1{
+  margin-left: 47px;
+}
+#i2{
+  margin-left: 56px;
+
+}
+#i3{
+  margin-top: 15px;
+  margin-left: 11px;
+
+}
+#i4{
+  margin-top: 15px;
+  margin-left: 29px;
+
+}
+#i5{
+  margin-top: 15px;
+  margin-left: 49px;
+
+}
+#i6{
+  margin-left: 32px;
+
+}
+#i7{
+  margin-top: 15px;
+  margin-left: 50px;
+
+}
+#i8{
+  margin-top: 15px;
+  margin-left: 54px;
+
+}
+#i9{
+
+  margin-top: 15px;
+}
+//button styling
+button{
+  background-color: #4be3b5;
+    border: none;
+    color:black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}

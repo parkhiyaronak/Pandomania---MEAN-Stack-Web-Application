@@ -1,0 +1,18 @@
+<div class="w">
+  <div class="4">
+    <div *ngIf="isAuthenticated; then doSomething; else doSomethingElse;"></div>
+      <ng-template #doSomething>
+        <p class="dm1"> You are here! donate something for community! </p>
+        <!--If a user is logged in or authencticated then this tempelate is executed-->
+        <a class="nav-link h5" [routerLink]="'/newdonations'">New Donation</a>
+        <app-donationstable  [alldonations] = "lstdonations" [isAuthenticatedUser] = "isAuthenticated" [currentuser]="this.user"></app-donationstable>
+      </ng-template>
+      <ng-template #doSomethingElse>
+        <p class="dm2"> You are not logged in, to post your donations kindly login</p>&nbsp;&nbsp;
+        <!--If a user is not logged in or authencticated then this tempelate is executed-->
+        <!-- <a id="dlbutton"  [routerLink]="['/log-in']" class="btn btn-primary">Log in</a> &nbsp;&nbsp; -->
+        <app-donationstable  [alldonations] = "lstdonations" [isAuthenticatedUser] = "isAuthenticated" [currentuser]="this.user"></app-donationstable>
+      </ng-template>
+  </div>
+</div>
+

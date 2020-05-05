@@ -1,0 +1,44 @@
+.table{
+  margin-left: 150px;
+  table-layout: auto;
+  width: 980px;
+}
+
+tr:hover {background-color:#e6fff9}
+th{
+  width: 100px !important;
+  background-color: #43e8c4;
+}
+td{
+  column-width: 300px;
+  //background-color: #e6fff9;
+}
+.dheader{
+  margin-left: 1px;
+}
+.btn1{
+  background-color: #43e8c4; /* Green */
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+.btn2{
+  margin-top: 3px;
+  background-color: #43e8c4; /* Green */
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+.page{
+  margin-left: 500px;
+}

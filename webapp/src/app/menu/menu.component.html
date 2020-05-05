@@ -1,0 +1,37 @@
+  <nav class="navbar navbar-expand-lg navbar-light bg-f menu" >
+    <script src="../components/Chatbot/back.js"></script>
+    <div class="collapse navbar-collapse">
+      <!-- Menu bar -->
+      <a class="navbar-brand" href="#" >
+        <img class="logo" src="../../assets/coronavirus.png" alt="Covid-19 Dashboard" />
+        <span class="d-sm-inline h4">Covid-19 Dashboard</span></a>
+      <ul class="navbar-nav mr-auto mt-lg-1">
+      </ul>
+      <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link h5" [routerLink]="'/home'" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5" [routerLink]="'/news'" routerLinkActive="active">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5"  [routerLink]="'/donations'" >Donations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5" [routerLink]="'/safetytips'" routerLinkActive="active">How to be safe?</a>
+        <li class="nav-item">
+          <a class="nav-link h5"  [routerLink]="'/chatbot'">ChatBot</a>
+        </li>
+        <li class="nav-item">
+          <div *ngIf="isAuthenticated; then doSomething; else doSomethingElse;"></div>
+          <ng-template #doSomething>
+            <a class="nav-link h5" [routerLink]="'/home'" (click)="logOut()">Log Out</a>
+            <!-- <p>You logged in as <em>{{user.email}}!</em></p> -->
+            </ng-template>
+          <ng-template #doSomethingElse>
+            <a class="nav-link h5" [routerLink]="'/login/signup'">Login/Signup</a>
+          </ng-template>
+          </li>
+      </ul>
+    </div>
+  </nav>

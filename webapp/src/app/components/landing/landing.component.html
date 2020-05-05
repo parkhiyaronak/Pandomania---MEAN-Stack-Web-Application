@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-4">
+      <div *ngIf="isAuthenticated; then doSomething; else doSomethingElse;"></div>
+      <ng-template #doSomething>
+        <!--If a user is authencticated or loged-in then this tempelate is executed-->
+        <p>You logged in <em>{{user.email}}!</em></p>
+        <button class="btn btn-primary" (click)="logOut()">Log out</button>
+      </ng-template>
+      <ng-template #doSomethingElse>
+        <!--If a user is not logged in or authencticated then this tempelate is executed-->
+        <div class="box">
+          <p class="m1">Sign in User</p>
+        <a [routerLink]="['/log-in']" class="submit">Log in</a> &nbsp;&nbsp;
+        <p class="m2">Not a User? Sigu up!</p>
+        <a [routerLink]="['/sign-up']" class="signup">Sign up</a>
+      </div>
+      </ng-template>
+    </div>
+  </div>
